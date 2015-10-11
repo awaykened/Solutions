@@ -1,4 +1,4 @@
-// CCO '13 - A Romantic Movie Outing
+// CCO '13 Day 2 Problem 1 - A Romantic Movie Outing
 // https://dmoj.ca/problem/cco13p4
 
 #include <iostream>
