@@ -1,4 +1,4 @@
-// CCO '01 - Election Night
+// CCO '01 Day 2 Problem 3 - Election Night
 // http://wcipeg.com/problem/ccc01s2p6
 
 #include <cstdio>
