@@ -1,4 +1,4 @@
-// CCO '09 - Dinner
+// CCO '09 Day 1 Problem 2 - Dinner
 // http://wcipeg.com/problem/ccc09s2p2
 
 #include <cstdio>
