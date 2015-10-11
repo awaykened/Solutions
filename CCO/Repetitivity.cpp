@@ -1,4 +1,4 @@
-// CCO '13 - Repetitivity
+// CCO '13 Day 2 Problem 3- Repetitivity
 // https://dmoj.ca/problem/cco13p6
 
 #include <cstdio>
