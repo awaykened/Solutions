@@ -1,4 +1,4 @@
-// CCO '15 - Timpanist
+// CCO '15 Day 2 Problem 2 - Timpanist
 // https://dmoj.ca/problem/cco15p5
 
 #include <cstdio>
