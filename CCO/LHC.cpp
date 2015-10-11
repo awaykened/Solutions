@@ -1,4 +1,4 @@
-// CCO '13 - LHC
+// CCO '13 Day 1 Problem 3 - LHC
 // https://dmoj.ca/problem/cco13p3
 
 #include <algorithm>
