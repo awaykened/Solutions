@@ -1,4 +1,4 @@
-// CCO '07 - Bowling for Numbers ++
+// CCO '07 Day 2 Problem 3 - Bowling for Numbers ++
 // http://wcipeg.com/problem/ccc07s2p3
 
 #include <cstdio>
