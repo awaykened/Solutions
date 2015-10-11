@@ -1,4 +1,4 @@
-// CCO '13 - Transforming Comets
+// CCO '13 Day 2 Problem 2 - Transforming Comets
 // https://dmoj.ca/problem/cco13p5
 
 #include <cstdio>
