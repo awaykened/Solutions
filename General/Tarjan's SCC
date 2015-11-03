@@ -1,0 +1,67 @@
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+#include <iostream>
+#include <cstring>
+#include <set>
+#include <queue>
+#include <assert.h>
+#include <bitset>
+#include <cmath>
+#include <random>
+#define scan(x) do{while((x=getchar())<'0'); for(x-='0'; '0'<=(_=getchar()); x=(x<<3)+(x<<1)+_-'0');}while(0)
+char _;
+#define inf 1<<30
+#define lc(x) x<<1
+#define rc(x) x<<1|1
+#define m(a,b) (a+b)/2
+#define EPS 1e-6
+#define PI 3.1415926535897932384
+#define For(a,b,c) for(int a = b;a<=c;a++)
+#define Rev(a,b,c) for(int a = b;a>=c;a--)
+#define pb push_back
+#define mp make_pair
+#define io cin.sync_with_stdio(0); cin.tie(0);
+#define MTRAND mt19937 gen(4)
+#define RNG(l,h) gen() % (h - l + 1) + l
+using namespace std;
+const int maxn=500002,MOD=1e9+7;
+int N,M,V[maxn],id[maxn],dfn[maxn],low[maxn],tp=-1,scc,cnt,tot[maxn];
+pair<int, int> dp[maxn][2]; vector<int> adj[maxn], adj2[maxn]; bool vis[maxn];
+vector<int> st;
+inline int read(int &x){
+    char c;
+    while(c=getchar(),c<'0'||c>'9');x=c-'0';
+    while(c=getchar(),c>='0'&&c<='9')x=x*10+c-'0';
+}
+void tarjan(int u){
+    dfn[u]=low[u]=++cnt;
+    st.push_back(u); vis[u]=1;
+    for(int i=0; i<adj[u].size(); i++){
+        int v=adj[u][i];
+        if(!dfn[v]){
+            tarjan(v); low[u]=min(low[u],low[v]);
+        }else if(vis[v]) low[u]=min(low[u],dfn[v]);
+    }
+    if(dfn[u]==low[u]){
+        scc++; int x;
+        do{
+            x=st.back(); st.pop(); vis[x]=0;
+            id[x]=scc; tot[scc]+=V[x];
+        }while(x!=u);
+    }
+}
+void rebuildGraph(){
+    for(int i=1; i<=N; i++){
+        int u=id[i];
+        for(int j=0; j<adj[i].size(); j++){
+            int v=id[adj[i][j]];
+            if(u==v) continue;
+            adj2[u].push_back(v);
+        }
+    }
+    for(int i=1; i<=scc; i++){
+        sort(adj2[i].begin(), adj2[i].end());
+        unique(adj2[i].begin(), adj2[i].end());
+    }
+}
