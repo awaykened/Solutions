@@ -27,7 +27,7 @@ char _;
 using namespace std;
 const int maxn=500002,MOD=1e9+7;
 int N,M,V[maxn],id[maxn],dfn[maxn],low[maxn],tp=-1,scc,cnt,tot[maxn];
-pair<int, int> dp[maxn][2]; vector<int> adj[maxn], adj2[maxn]; bool vis[maxn];
+vector<int> adj[maxn], adj2[maxn]; bool vis[maxn];
 vector<int> st;
 inline void read(int &x){
     char c;
